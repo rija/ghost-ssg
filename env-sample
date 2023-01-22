@@ -1,0 +1,2 @@
+# Usage: cp env-sample .env
+REMOTE_URL=
