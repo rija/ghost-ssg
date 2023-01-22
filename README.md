@@ -46,4 +46,4 @@ A preview of the static website can be viewed at http://localhost:9999
 $ docker-compose run --rm publish
 ```
 
-The static pages are in the ``site`` directory ready to published to your remote web site
+The static pages are in the ``site`` directory ready to be published to your remote web site
