@@ -39,13 +39,14 @@ $ docker-compose run --rm export
 
 A preview of the static website can be viewed at http://localhost:9999
 
-4. Export the content of Ghost as static files for publishing
+4. Publish the content of Ghost
 
 ```
-$ docker-compose run --rm publish
+$ ./publish
 ```
 
-The static pages are in the ``site`` directory ready to be published to your remote web site
+The static web pages are first exported in the ``public`` directory inside the directory defined by the $PAGES_REPO_PATH variable.
+Then the changes are commited and pushed to the remote git repository.
 
 5. Shutdown the servers
 

@@ -25,7 +25,7 @@ services:
   publish:
     build: .
     volumes:
-      - "./site:/static"
+      - "./$PAGES_REPO_PATH/public:/static"
     command: /usr/local/bin/gssg --url $REMOTE_URL
     extra_hosts:
       - "localhost:172.31.238.10"
