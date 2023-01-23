@@ -1,5 +1,6 @@
 content
 site
+stage
 .env
 .DS_store
 config.production.json

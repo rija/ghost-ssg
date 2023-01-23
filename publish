@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -ex
+source .env
+
+docker-compose run --rm publish
+
+cd $PAGES_REPO_PATH
+git add -A
+git commit -m "Update on the website at $(date)"
+git push origin master
+cd ..
