@@ -27,8 +27,7 @@ Then edit .env file to assign a value to ``REMOTE_URL``
 2. Start the two servers (the blog editor and the preview server)
 
 ```
-$ docker-compose build export publish
-$ docker-compose up -d editor preview
+$ ./up
 ```
 Ghost is now available at http://localhost:2368
 
@@ -47,3 +46,23 @@ $ docker-compose run --rm publish
 ```
 
 The static pages are in the ``site`` directory ready to be published to your remote web site
+
+5. Shutdown the servers
+
+```
+$ ./down
+```
+
+## Troubleshooting
+
+* Show what server is up:
+
+```
+./whatsup
+```
+
+* Inspect the server logs:
+
+```
+./log
+```
