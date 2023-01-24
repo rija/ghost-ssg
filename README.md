@@ -34,7 +34,7 @@ Ghost is now available at http://localhost:2368
 3. Export the content of Ghost as static file for preview
 
 ```
-$ docker-compose run --rm export
+$ ./preview
 ```
 
 A preview of the static website can be viewed at http://localhost:9999
