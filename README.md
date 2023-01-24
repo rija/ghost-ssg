@@ -67,3 +67,10 @@ $ ./down
 ```
 ./log
 ```
+
+* Show the current versions of the dependencies
+
+```
+./versions
+```
+

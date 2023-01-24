@@ -39,6 +39,10 @@ services:
     ports:
       - 9999:80
 
+  version:
+    image: rija/gssg:20230123
+    command: sh -c "echo 'gssg:' && /usr/local/bin/gssg --version && echo 'wget:' && wget --version | head -1"
+
 networks:
   app-net:
     driver: bridge
