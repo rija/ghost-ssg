@@ -13,7 +13,7 @@ services:
         ipv4_address: 172.31.238.10
 
   export:
-    image: rija/gssg:20230123
+    image: rija/gssg:20230124
     volumes:
       - "./site:/static"
     command: /usr/local/bin/gssg --ignore-absolute-paths --url $REMOTE_URL
@@ -23,7 +23,7 @@ services:
       - app-net
 
   publish:
-    image: rija/gssg:20230123    
+    image: rija/gssg:20230124    
     volumes:
       - "./$PAGES_REPO_PATH/public:/static"
     command: /usr/local/bin/gssg --url $REMOTE_URL
@@ -40,7 +40,7 @@ services:
       - 9999:80
 
   version:
-    image: rija/gssg:20230123
+    image: rija/gssg:20230124
     command: sh -c "echo 'gssg:' && /usr/local/bin/gssg --version && echo 'wget:' && wget --version | head -1"
 
 networks:
