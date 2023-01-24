@@ -41,7 +41,7 @@ services:
 
   version:
     image: rija/gssg:20230124
-    command: sh -c "echo 'gssg:' && /usr/local/bin/gssg --version && echo 'wget:' && wget --version | head -1 && echo 'Node:' && node --version"
+    command: sh -c "echo 'gssg:' && /usr/local/bin/gssg --version && echo 'wget:' && wget --version | head -1 && echo 'Node:' && node --version && echo 'NPM:' && npm --version"
 
 networks:
   app-net:
