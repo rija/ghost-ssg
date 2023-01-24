@@ -33,7 +33,7 @@ services:
       - app-net
 
   preview:
-    image: nginx:alpine
+    image: nginx:1.23.3-alpine
     volumes:
       - ./site:/usr/share/nginx/html:ro
     ports:
