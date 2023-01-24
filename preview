@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -ex
+source .env
+
+docker-compose run --rm export
+
+PREVIEW_URL=http:localhost:9999
+xdg-open $PREVIEW_URL || sensible-browser $PREVIEW_URL || x-www-browser $PREVIEW_URL || gnome-open $PREVIEW_URL || open $PREVIEW_URL
