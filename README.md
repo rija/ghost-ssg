@@ -15,6 +15,10 @@ A Docker-based pipeline to publish the content of a local Ghost 4 server as stat
 └──────────────────────────────┘                    └──────────────────────────────┘                        └──────────────────────────────┘                  └──────────────────────────────┘
 ```
 
+## Prerequisites
+
+You need to have ``Docker`` and ``bash`` installed on your system already.
+
 ## Usage
 
 1. First, create an ``.env`` file in the project directory, in which you give a value to the ``REMOTE_URL`` variable:
