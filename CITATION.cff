@@ -5,6 +5,34 @@ authors:
   given-names: "Rija"
   orcid: "https://orcid.org/0000-0001-6269-6662"
 title: "Docker-based, Opensource pipeline to make static webpages from a locally deployed instance of Ghost(Headless NodeJS CMS)"
-version: 0.9.0
 date-released: 2023-01-22
 url: "https://github.com/rija/ghost-ssg"
+references:
+  - authors:
+      - family-names: Niksic
+        given-names: Hrvoje
+    title: "GNU Wget"
+    type: software
+    version: 1.21.3
+  - authors:
+      - name: Fried-Chicken
+    title: "ghost-static-generator"
+    type: software
+    version: 1.1.4
+  - authors:
+      - name: "Ghost Foundation"
+    title: "Ghost"
+    type: software
+    version: 4.48.1
+  - authors:
+      - family-names: Sysoev
+        given-names: Igor
+    title: "Nginx"
+    type: software
+    version: 1.23.3   
+  - authors:
+      - family-names: Dahl
+        given-names: Ryan
+    title: "NodeJS"
+    type: software
+    version: 19.4.0    
