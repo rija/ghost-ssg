@@ -16,7 +16,7 @@ services:
     image: rija/gssg:20230124
     volumes:
       - "./site:/static"
-    command: /usr/local/bin/gssg --ignore-absolute-paths --url $REMOTE_URL
+    command: /usr/local/bin/gssg --url http://localhost:9999
     extra_hosts:
       - "localhost:172.31.238.10"
     networks:
