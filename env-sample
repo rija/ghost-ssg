@@ -1,3 +1,4 @@
 # Usage: cp env-sample .env
 REMOTE_URL=
 PAGES_REPO_PATH=stage/gitlab
+DEST_BRANCH=master
