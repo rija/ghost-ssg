@@ -16,7 +16,7 @@ services:
     image: rija/gssg:20230124
     volumes:
       - "./site:/static"
-    command: /usr/local/bin/gssg --ignore-absolute-paths --url $REMOTE_URL
+    command: /usr/local/bin/gssg --url http://localhost:9999
     extra_hosts:
       - "localhost:172.31.238.10"
     networks:
@@ -38,10 +38,17 @@ services:
       - ./site:/usr/share/nginx/html:ro
     ports:
       - 9999:80
+    networks:
+      - app-net
 
   version:
     image: rija/gssg:20230124
     command: sh -c "echo 'gssg:' && /usr/local/bin/gssg --version && echo 'wget:' && wget --version | head -1 && echo 'Node:' && node --version && echo 'NPM:' && npm --version"
+
+  test:
+    image: bats/bats:1.8.2
+    volumes:
+      - .:/code
 
 networks:
   app-net:
