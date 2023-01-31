@@ -17,7 +17,12 @@ A Docker-based pipeline to publish the content of a local Ghost 4 server as stat
 
 ## Prerequisites
 
-You need to have ``Docker`` and ``bash`` installed on your system already.
+You need to have installed on your system already:
+
+* Docker
+* bash
+* git
+* bats-core (optional, for running the test suite) 
 
 ## Usage
 
