@@ -11,5 +11,6 @@ before_script:
 test:
   script:
     - cp env-sample .env
+    - cp config.production.json.sample config.production.json
     - ./up
     - bats tests
