@@ -5,8 +5,11 @@ services:
   - docker:dind
 
 before_script:
+  - apk add npm bash
   - npm install -g bats
 
 test:
   script:
+    - cp env-sample .env
+    - ./up
     - bats tests
