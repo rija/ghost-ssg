@@ -2,3 +2,4 @@
 REMOTE_URL=
 PAGES_REPO_PATH=stage/gitlab
 DEST_BRANCH=master
+DEST_REPO=
