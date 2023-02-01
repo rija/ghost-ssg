@@ -1,4 +1,4 @@
-# Ghost-ssg  									![tests](https://gitlab.com/gh-rija/ghost-ssg/badges/main/pipeline.svg)
+# Ghost-ssg  									[![tests](https://gitlab.com/gh-rija/ghost-ssg/badges/main/pipeline.svg)](https://gitlab.com/gh-rija/ghost-ssg/-/pipelines)
 
 
 A Docker-based pipeline to publish the content of a local Ghost 4 server as static pages.
