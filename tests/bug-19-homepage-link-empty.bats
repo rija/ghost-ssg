@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 setup () {
-	./preview 1> /dev/null 2> /dev/null
+	./preview 1> /dev/null
 }
 
 @test "link to homepage on other page is not empty" {
