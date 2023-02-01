@@ -1,0 +1,12 @@
+image: docker:latest
+  
+
+services:
+  - docker:dind
+
+before_script:
+  - npm install -g bats
+
+test:
+  script:
+    - bats tests
