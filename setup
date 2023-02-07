@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+source .env
+source ./src/lib/repo_setup.sh
+
+create_dir_for_repo $PAGES_REPO_PATH $DEST_REPO
