@@ -12,5 +12,6 @@ create_dir_for_repo () {
 		echo "repo cannot be empty"
 	else
 		echo "try cloning $remoteRepo"
+		git clone $remoteRepo $baseDir
 	fi
 }
