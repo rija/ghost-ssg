@@ -8,8 +8,9 @@ create_dir_for_repo () {
 	remoteRepo=$2
 	if [ -d $baseDir ];then
 		echo "doing nothing, $baseDir already exists"
-	 	exit 0
+	elif [ -z $remoteRepo ];then
+		echo "repo cannot be empty"
 	else
-		echo "Creating directory..."
+		echo "try cloning $remoteRepo"
 	fi
 }
