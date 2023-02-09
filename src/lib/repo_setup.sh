@@ -18,7 +18,9 @@ create_dir_for_repo () {
 
 configure_ghost () {
 	baseDir=$1
-	if [ -f config.production.json ];then
+	if [ -f $baseDir/config.production.json ];then
 		echo "doing nothing, the configuration file already exists"
+	else
+		cp config.production.json.sample $baseDir/config.production.json
 	fi
 }
