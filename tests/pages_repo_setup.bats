@@ -35,3 +35,14 @@ teardown () {
 	[[ $result =~ "try cloning $existingRemoteRepo" ]]
 	[ -d "tests/myrepo" ]
 }
+
+@test "error message and no action taken if remote repo cloning fails" {
+	local existingRemoteRepo="https://example.com/gh-rija/ssg-test-output-NOTEXIST.git"
+	run create_dir_for_repo "tests/myrepo" $existingRemoteRepo	
+	[[ "$output" =~ "try cloning $existingRemoteRepo" ]]
+	[ ! -d "tests/myrepo" ]
+	[[ "$output" =~ "fatal: repository" ]]
+	[ $status -ne 0 ]
+
+
+}
