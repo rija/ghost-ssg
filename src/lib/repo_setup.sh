@@ -15,3 +15,10 @@ create_dir_for_repo () {
 		git clone $remoteRepo $baseDir
 	fi
 }
+
+configure_ghost () {
+	baseDir=$1
+	if [ -f config.production.json ];then
+		echo "doing nothing, the configuration file already exists"
+	fi
+}
