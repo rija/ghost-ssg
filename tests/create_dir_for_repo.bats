@@ -1,5 +1,7 @@
 #!/usr/bin/env bats
 
+# test cases for create_dir_for_repo()
+
 source ./src/lib/repo_setup.sh
 
 setup () {
