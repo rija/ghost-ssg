@@ -2,8 +2,9 @@
 
 set -e
 
-source .env
 source ./src/lib/repo_setup.sh
+configure_env "."
+source .env
 
 
 create_dir_for_repo $PAGES_REPO_PATH $DEST_REPO

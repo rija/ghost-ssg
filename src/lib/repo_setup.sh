@@ -24,3 +24,9 @@ configure_ghost () {
 		cp config.production.json.sample $baseDir/config.production.json
 	fi
 }
+
+configure_env () {
+	if [ -f $baseDir/.env ];then
+		echo "doing nothing, the .env file already exists"
+	fi
+}
