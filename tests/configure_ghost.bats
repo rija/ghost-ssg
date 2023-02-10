@@ -2,7 +2,7 @@
 
 source ./src/lib/repo_setup.sh
 
-setup () {
+teardown () {
 	if  [ -f tests/config.production.json ];then
 		rm tests/config.production.json
 	fi
