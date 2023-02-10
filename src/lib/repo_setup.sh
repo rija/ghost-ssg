@@ -41,4 +41,8 @@ create_runtime_dirs () {
 	else
 		mkdir $runtimeDir/site
 	fi
+
+	if [ -d $runtimeDir/stage ];then
+		echo "doing nothing, $runtimeDir/stage already exists"
+	fi
 }
