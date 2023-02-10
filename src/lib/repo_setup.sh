@@ -26,6 +26,7 @@ configure_ghost () {
 }
 
 configure_env () {
+	envBaseDir=$1
 	if [ -f $envBaseDir/.env ];then
 		echo "doing nothing, file $envBaseDir/.env already exists"
 	else
