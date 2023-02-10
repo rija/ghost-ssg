@@ -15,3 +15,9 @@ teardown () {
 	[[ $output = "doing nothing, $baseDir/site already exists" ]]
 
 }
+
+@test "if site directory do not exists, create it" {
+	baseDir=tests
+	run create_runtime_dirs $baseDir
+	[ -d $baseDir/site ]
+}

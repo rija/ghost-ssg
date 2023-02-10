@@ -38,5 +38,7 @@ create_runtime_dirs () {
 	runtimeDir=$1
 	if [ -d $runtimeDir/site ];then
 		echo "doing nothing, $runtimeDir/site already exists"
+	else
+		mkdir $runtimeDir/site
 	fi
 }
