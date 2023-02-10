@@ -3,16 +3,15 @@
 set -e
 
 create_dir_for_repo () {
-	pwd
-	repoBaseDir=$1 
+	repoFullPath=$1 
 	remoteRepo=$2
-	if [ -d $repoBaseDir ];then
-		echo "doing nothing, $repoBaseDir already exists"
+	if [ -d $repoFullPath ];then
+		echo "doing nothing, $repoFullPath already exists"
 	elif [ -z $remoteRepo ];then
 		echo "repo cannot be empty"
 	else
 		echo "try cloning $remoteRepo"
-		git clone $remoteRepo $repoBaseDir
+		git clone $remoteRepo $repoFullPath
 	fi
 }
 
@@ -44,5 +43,7 @@ create_runtime_dirs () {
 
 	if [ -d $runtimeDir/stage ];then
 		echo "doing nothing, $runtimeDir/stage already exists"
+	else
+		mkdir $runtimeDir/stage
 	fi
 }

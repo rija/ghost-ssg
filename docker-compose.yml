@@ -25,7 +25,7 @@ services:
   publish:
     image: rija/gssg:20230124    
     volumes:
-      - "./$PAGES_REPO_PATH/public:/static"
+      - "./stage/$PAGES_REPO_PATH/public:/static"
     command: /usr/local/bin/gssg --url $REMOTE_URL
     extra_hosts:
       - "localhost:172.31.238.10"

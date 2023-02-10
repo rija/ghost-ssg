@@ -31,3 +31,10 @@ teardown () {
 	run create_runtime_dirs $baseDir
 	[[ $output = "doing nothing, $baseDir/stage already exists" ]]
 }
+
+
+@test "if stage directory do not exists, create it" {
+	baseDir=tests
+	run create_runtime_dirs $baseDir
+	[ -d $baseDir/stage ]
+}
