@@ -2,12 +2,13 @@
 
 set -e
 
+dir="."
 source ./src/lib/repo_setup.sh
-configure_env "."
+configure_ghost $dir
+configure_env $dir
 source .env
 
 
 create_dir_for_repo $PAGES_REPO_PATH $DEST_REPO
 
 
-configure_ghost "."

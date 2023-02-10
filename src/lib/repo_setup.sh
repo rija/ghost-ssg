@@ -4,29 +4,31 @@ set -e
 
 create_dir_for_repo () {
 	pwd
-	baseDir=$1 
+	repoBaseDir=$1 
 	remoteRepo=$2
-	if [ -d $baseDir ];then
-		echo "doing nothing, $baseDir already exists"
+	if [ -d $repoBaseDir ];then
+		echo "doing nothing, $repoBaseDir already exists"
 	elif [ -z $remoteRepo ];then
 		echo "repo cannot be empty"
 	else
 		echo "try cloning $remoteRepo"
-		git clone $remoteRepo $baseDir
+		git clone $remoteRepo $repoBaseDir
 	fi
 }
 
 configure_ghost () {
-	baseDir=$1
-	if [ -f $baseDir/config.production.json ];then
+	ghostBaseDir=$1
+	if [ -f $ghostBaseDir/config.production.json ];then
 		echo "doing nothing, the configuration file already exists"
 	else
-		cp config.production.json.sample $baseDir/config.production.json
+		cp config.production.json.sample $ghostBaseDir/config.production.json
 	fi
 }
 
 configure_env () {
-	if [ -f $baseDir/.env ];then
-		echo "doing nothing, the .env file already exists"
+	if [ -f $envBaseDir/.env ];then
+		echo "doing nothing, file $envBaseDir/.env already exists"
+	else
+		cp env-sample $envBaseDir/.env
 	fi
 }
