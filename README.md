@@ -38,27 +38,22 @@ A Docker-based pipeline to publish the content of a local Ghost 4 server as stat
 
 ## Usage
 
-1. First, create an ``.env`` file in the project directory, in which you give a value to the ``REMOTE_URL`` variable:
+1. Run the setup script:
 
 ```
-$ cp env-sample .env
+$ ./setup
 ```
-Then edit .env file to assign a value to ``REMOTE_URL``
+Then edit .env file to assign a value to ``DEST_REPO``, ensure the value for PAGES_REPO_PATH and DEST_BRANCH are correct
 
-2. Then, create a configuration file for the Ghost server
 
-```
-$ cp config.production.json.sample config.production.json
-```
-
-3. Start the two servers (the blog editor and the preview server)
+2. Start the servers (the blog editor and the preview server)
 
 ```
 $ ./up
 ```
 Ghost is now available at http://localhost:2368
 
-4. Export the content of Ghost as static file for preview
+3. Export the content of Ghost as static file for preview
 
 ```
 $ ./preview
@@ -66,7 +61,7 @@ $ ./preview
 
 A preview of the static website can be viewed at http://localhost:9999
 
-5. Publish the content of Ghost
+4. Publish the content of Ghost
 
 ```
 $ ./publish
@@ -75,7 +70,7 @@ $ ./publish
 The static web pages are first exported in the ``public`` directory inside the directory defined by the $PAGES_REPO_PATH variable.
 Then the changes are commited and pushed to the remote git repository.
 
-6. Shutdown the servers
+5. Shutdown the servers
 
 ```
 $ ./down
