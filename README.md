@@ -81,18 +81,23 @@ $ ./down
 * Show what server is up:
 
 ```
-./whatsup
+$ ./whatsup
 ```
 
 * Inspect the server logs:
 
 ```
-./log
+$ ./log
 ```
 
 * Show the current versions of the dependencies
 
 ```
-./versions
+$ ./versions
 ```
 
+* Run the test suite
+
+```
+$ ./test
+```
