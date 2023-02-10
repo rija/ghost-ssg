@@ -33,3 +33,10 @@ configure_env () {
 		cp env-sample $envBaseDir/.env
 	fi
 }
+
+create_runtime_dirs () {
+	runtimeDir=$1
+	if [ -d $runtimeDir/site ];then
+		echo "doing nothing, $runtimeDir/site already exists"
+	fi
+}
