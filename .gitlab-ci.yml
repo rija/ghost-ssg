@@ -5,7 +5,7 @@ services:
   - docker:dind
 
 before_script:
-  - apk add npm bash
+  - apk add npm bash git
   - npm install -g bats
 
 test:

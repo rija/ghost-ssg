@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+
+dir="."
+source ./src/lib/repo_setup.sh
+configure_ghost $dir
+configure_env $dir
+source .env
+
+create_runtime_dirs $dir
+create_dir_for_repo "stage/$PAGES_REPO_PATH" $DEST_REPO
+
+
