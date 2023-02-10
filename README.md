@@ -96,3 +96,8 @@ $ ./down
 ./versions
 ```
 
+* Run the test suite
+
+```
+$ ./test
+```
