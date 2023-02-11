@@ -1,5 +1,5 @@
 # Usage: cp env-sample .env
-REMOTE_URL=
+REMOTE_URL="<your blog url here>"
 PAGES_REPO_PATH=gitlab
 DEST_BRANCH=master
-DEST_REPO=
+DEST_REPO="<your remote git repo here>"
