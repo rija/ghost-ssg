@@ -10,6 +10,7 @@ before_script:
 
 test:
   script:
+    - mkdir -p stage/gitlab
     - ./setup
     - ./up
     - ./test

@@ -1,5 +1,6 @@
 #!/usr/sbin/env bats
 
+
 source ./src/lib/repo_setup.sh
 
 
@@ -20,4 +21,17 @@ teardown () {
 	baseDir=tests
 	run configure_env $baseDir
 	[ -f tests/.env ]
+}
+
+@test "ensure .env file can be loaded" {
+	baseDir=tests
+	cp env-sample tests/.env
+	source tests/.env
+	[[ ! -z $REMOTE_URL ]]
+	[[ ! -z $PAGES_REPO_PATH ]]
+	[[ ! -z $DEST_BRANCH ]]
+	[[ ! -z $DEST_REPO ]]
+
+
+
 }
