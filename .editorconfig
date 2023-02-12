@@ -1,0 +1,18 @@
+# EditorConfig is awesome: https://EditorConfig.org
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset  = utf-8
+
+[{**.*sh,setup,preview,publish,up,down,versions,log,test,whatsup,**.bats}]
+indent_size = tab
+indent_style = tab
+trim_trailing_whitespace = true
+
+
+[**.bats]
+indent_size = tab
+indent_style = tab
+trim_trailing_whitespace = true
