@@ -15,7 +15,6 @@ Refs: #(issue number goes here)
   * [ ] I have read, understood and agreed to the terms of the CODE_OF_CONDUCT document
   * [ ] I have read, understood and agreed to the terms of the CONTRIBUTING document
   * [ ] I have read, understood and agreed to the terms of the SECURITY document
-  * [ ] I have tested thoroughly the changes on my local environment
   
   Additionally, for changes to documentation:
   
@@ -31,6 +30,5 @@ Refs: #(issue number goes here)
   
   * [ ] I have discussed with the project maintainer the approach and design to the changes prior to implementing them
   * [ ] I have obtained agreement from the project maintainer to proceed with said approach and design
-  
-  
+    
 

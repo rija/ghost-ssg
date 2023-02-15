@@ -1,9 +1,10 @@
 # How to contribute ?
 
-* Start with our issue tracker [1] to see what are the open issues and feel free to raise new issues or contribute to existing ones.
+* Start with our issue tracker [1] to check what are the open issues, and feel free to raise new issues if there isn't one yet for the subject you are looking for.
+* Feel free to comment on existing open issues if you think it can help with the issue
 * This is more like an integration project, make sure you understand what are the pieces and how they fit together
-* When creating a Pull Request, keep it as small as possible and highly focused
-* When creating a Pull Request, do mention which issue number it relates to (only one, no more, no less)
+* When creating a Pull Request, **the only way we accept code/docs contributions**, keep it as small as possible and highly focused
+* In a Pull Request, do mention which issue number it relates to
 * When commenting on others' Pull Requests, use Conventional Comments[2]
 * Reach out to the maintainer before trying to make complex changes
 
@@ -21,6 +22,13 @@ git config commit.template .commit-template
 * if it took multiples trial-and-error kind of commits to implement a given unit of change, it's better to combine them together into one commit by squashing [4] them before making a pull request.
 * Try to reference the issue number you are making changes to in your commit message, especially for the main commit that implements the issue, and the last commit before you are ready to make a pull request (see `.commit-template` on how to format that information, which is from Conventional Commits[3]).
 
+## Testing your changes
+
+If the change is a code change, make sure you are testing thoroughly: 
+
+* Not just in your setup, but also on a fresh deployment of the project
+* You should write automated tests for your code changes and place them inside the `tests` directory
+* Make sure the existing automated tests still pass. You can run all the tests with the command `./test`
 
 
 [1] https://github.com/rija/ghost-ssg/issues
