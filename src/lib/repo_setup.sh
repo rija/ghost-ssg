@@ -47,3 +47,12 @@ create_runtime_dirs () {
 		mkdir $runtimeDir/stage
 	fi
 }
+
+create_backup_dir () {
+	backupDir=$1
+	if [ -d $backupDir/ghost_backups ];then
+		echo "doing nothing, $backupDir/ghost_backups already exists"
+	else
+		mkdir $backupDir/ghost_backups
+	fi
+}

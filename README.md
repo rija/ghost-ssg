@@ -46,7 +46,7 @@ $ ./setup
 Then edit .env file to assign a value to ``DEST_REPO``, ensure the value for PAGES_REPO_PATH and DEST_BRANCH are correct
 
 
-2. Start the servers (the blog editor and the preview server)
+2. Start the servers (the blog editor, the preview server and the backup server)
 
 ```
 $ ./up
@@ -70,7 +70,15 @@ $ ./publish
 The static web pages are first exported in the ``public`` directory inside the directory defined by the $PAGES_REPO_PATH variable.
 Then the changes are commited and pushed to the remote git repository.
 
-5. Shutdown the servers
+7. Backup your installation
+
+```
+$ ./backup
+```
+
+This will backup the SQL database and the content directory
+
+6. Shutdown the servers
 
 ```
 $ ./down
@@ -100,4 +108,10 @@ $ ./versions
 
 ```
 $ ./test
+```
+
+* Restoring from backup
+
+```
+$ ./restore
 ```

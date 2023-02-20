@@ -50,6 +50,20 @@ services:
     volumes:
       - .:/code
 
+  backup:
+    image: rija/ghost-backup:4
+    environment:
+      AUTOMATED_BACKUPS: false
+      GHOST_SERVICE_NAME: editor
+      GHOST_SERVICE_USER_EMAIL: ${GHOST_SERVICE_USER_EMAIL}
+      GHOST_SERVICE_USER_PASSWORD: ${GHOST_SERVICE_USER_PASSWORD}
+    volumes_from:
+      - editor
+    volumes:
+      - ${BACKUP_PATH}/ghost_backups:/backups
+    networks:
+      - app-net
+
 networks:
   app-net:
     driver: bridge

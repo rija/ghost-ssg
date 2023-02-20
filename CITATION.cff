@@ -36,3 +36,9 @@ references:
     title: "NodeJS"
     type: software
     version: 19.4.0    
+  - authors:
+      - family-names: Bennett
+        given-names: Tim
+    title: "Ghost Backup"
+    type: software
+    version: 4   
