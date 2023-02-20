@@ -109,3 +109,9 @@ $ ./versions
 ```
 $ ./test
 ```
+
+* Restoring from backup
+
+```
+$ ./restore
+```
