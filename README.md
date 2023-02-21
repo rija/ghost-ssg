@@ -110,7 +110,7 @@ $ ./versions
 $ ./test
 ```
 
-* Restoring from backup
+* Restore from backup
 
 ```
 $ ./restore
